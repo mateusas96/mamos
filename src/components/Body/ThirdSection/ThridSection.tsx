@@ -1,6 +1,6 @@
 export default function ThirdSection() {
     const customThridSectionStyles = {
-        backgroundImage: 'url("../2.jpg")',
+        backgroundImage: 'url("./2.jpg")',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
