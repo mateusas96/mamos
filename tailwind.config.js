@@ -7,11 +7,18 @@ module.exports = {
             tablet: '768px',
             laptop: '992px',
             desktop: '1200px',
+            aboveGalaxyFold: '310px',
         },
         extend: {
             colors: {
                 'accent-1': '#fff5f5',
-                'primary-btn': '#454545',
+                'white-transparent': '#ffffffcf',
+            },
+            width: {
+                '1224px': '1224px',
+            },
+            borderRadius: {
+                100: '100%',
             },
         },
     },

@@ -1,20 +1,38 @@
-import React from 'react';
-
 export default function MainSection() {
+    const customMainSectionStyles = {
+        backgroundImage: 'url(./1.jpg)',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    };
+
     return (
-        <section className="w-full laptop:flex bg-accent-1">
-            {/* left-side */}
-            <div className="laptop:w-1/2 laptop:px-10 px-4 laptop:py-32 py-16">
-                <h1 className="laptop:text-7xl text-5xl">Hello, so good to see you!</h1>
-                <div className="text-xl laptop:py-16 pt-10 pb-4">
-                    I help small and medium-sized businesses grow their audience and brand recognition through social
-                    media.
+        <section
+            className="w-full flex justify-center laptop:bg-fixed bg-scroll"
+            style={customMainSectionStyles}
+            id="pagrindinis"
+        >
+            <div className="laptop:w-1224px w-full laptop:flex gap-32">
+                {/* left-side */}
+                <div className="laptop:w-1/2 laptop:px-8 px-4 laptop:py-32 py-12">
+                    <div className="laptop:text-5xl text-3xl break-all aboveGalaxyFold:break-normal">
+                        PSICHOTERAPEUTO PASLAUGOS
+                    </div>
+                    <div className="text-xl laptop:py-12 pt-10 pb-4">
+                        <div className="pb-6">Studija „Pokytis“</div>
+                        <p className="indent-10 tablet:w-3/4 laptop:w-full">
+                            Jausdamas žmogus išreiškia save. Įprasmindami kančią atskleidžiame pačią žmogiškiausią
+                            sielos gelmę, bręstame, augame, viršijame savo galias. Kaip tik tada, kai esame bejėgiai
+                            pakeisti situaciją, kai mus apima neviltis, - kaip tik tada privalom pasikeisti patys.
+                        </p>
+                        <div className="text-sm pt-2">Viktor E. Frankl</div>
+                    </div>
+                    <a href="#susisiekite">
+                        <button className="bg-zinc-800 hover:bg-zinc-900 text-white mt-4 py-3 px-10 text-xl">
+                            Susisiekite su manimi
+                        </button>
+                    </a>
                 </div>
-                <button className="bg-primary-btn text-white mt-4 py-3 px-10 text-xl">Contact me</button>
-            </div>
-            {/* right-side */}
-            <div className="laptop:w-1/2 laptop:px-6 px-4 laptop:mt-0 -mt-10 laptop:pb-0 pb-8">
-                <img className="w-full h-full" src="./iStock-1383506907.jpg" alt="s" />
             </div>
         </section>
     );

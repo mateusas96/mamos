@@ -1,0 +1,28 @@
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, '50px');
+}
+
+/* custom scrollbar */
+@media screen and (min-width: 992px) {
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #fff5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #91a3a7;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #7d8d91;
+    }
+}
