@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useCallback, useRef, useState } from 'react';
+import env from '../../../env.json';
 
 export default function FourthSection() {
     const initialFieldsValues: { [key: string]: string } = {
@@ -70,12 +71,7 @@ export default function FourthSection() {
         e.preventDefault();
 
         try {
-            const resp = await emailjs.sendForm(
-                'service_dlgv7a9',
-                'template_ehg0blm',
-                form.current,
-                'PxuLCPw7zdZn6YgPI',
-            );
+            const resp = await emailjs.sendForm(env.serviceID, env.templateID, form.current, env.publicKey);
             const { status } = resp;
             if (status === 200) {
                 setApiInteraction((oldVal) => ({
@@ -83,6 +79,7 @@ export default function FourthSection() {
                     showSpinner: false,
                     showCheckMark: true,
                 }));
+                setInputFieldsValues(initialFieldsValues);
             }
         } catch (error) {
             console.log(error);
