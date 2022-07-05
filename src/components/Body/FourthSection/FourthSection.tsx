@@ -95,12 +95,12 @@ export default function FourthSection() {
 
     return (
         <section className="w-full flex justify-center" id="susisiekite">
-            <div className="laptop:w-1224px w-full">
+            <div className="laptop:w-1224px w-full flex tablet:flex-row flex-col">
                 {/* left-side */}
-                <div className="w-full flex justify-center">
-                    <div className="laptop:py-4 py-2 tablet:w-1/2 w-11/12">
+                <div className="tablet:w-1/2 w-full flex justify-center">
+                    <div className="laptop:py-4 py-2 tablet:w-3/4 w-11/12">
                         <div className="laptop:text-2xl text-lg font-semibold text-center">SUSISIEKITE</div>
-                        <div className="py-6 justify-center flex">
+                        <div className="pb-1 justify-center flex">
                             <form ref={form} className="flex flex-col">
                                 <input className="hidden" type="text" name="to_name" defaultValue="Renata" />
                                 <div className="flex flex-wrap -mx-3">
@@ -227,6 +227,10 @@ export default function FourthSection() {
                             </form>
                         </div>
                     </div>
+                </div>
+                {/* right-side */}
+                <div className="tablet:w-1/2 w-full inline-flex justify-center items-center">
+                    <img src="./3.jpg" width="auto" alt="labrinth-man" />
                 </div>
             </div>
         </section>
