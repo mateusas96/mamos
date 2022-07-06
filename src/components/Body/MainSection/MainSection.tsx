@@ -19,7 +19,6 @@ export default function MainSection() {
                         PSICHOTERAPEUTO PASLAUGOS
                     </div>
                     <div className="text-xl laptop:py-12 pt-10 pb-4">
-                        <div className="pb-6">Studija „Pokytis“</div>
                         <p className="indent-10 tablet:w-3/4 laptop:w-full">
                             Jausdamas žmogus išreiškia save. Įprasmindami kančią atskleidžiame pačią žmogiškiausią
                             sielos gelmę, bręstame, augame, viršijame savo galias. Kaip tik tada, kai esame bejėgiai
@@ -29,7 +28,7 @@ export default function MainSection() {
                     </div>
                     <a href="#susisiekite">
                         <button className="bg-zinc-800 hover:bg-zinc-900 text-white mt-4 py-3 px-10 text-xl">
-                            Susisiekite su manimi
+                            Susisiekite
                         </button>
                     </a>
                 </div>

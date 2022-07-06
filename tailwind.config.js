@@ -16,6 +16,9 @@ module.exports = {
             },
             width: {
                 '1224px': '1224px',
+                '300px': '300px',
+                '250px': '250px',
+                '200px': '200px',
             },
             borderRadius: {
                 100: '100%',

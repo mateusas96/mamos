@@ -1,8 +1,8 @@
 export default function SecondSection() {
     const studies = [
+        'Klaipėdos universitetas - psichologija',
         'Vilniaus Geštalto institutas - geštalto psichoterapija',
         'Vilniaus Geštalto institutas - grupinė psichoterapija',
-        'Klaipėdos universitetas - psichologija',
         'VPU - dalyko pedagogika',
     ];
 
@@ -37,7 +37,11 @@ export default function SecondSection() {
                 </div>
                 {/* right-side */}
                 <div className="tablet:w-1/2 w-full inline-flex flex-col justify-center items-center">
-                    <img className="rounded-100" width="300px" src="./IMG-0253.jpg" alt="me" />
+                    <img
+                        className="rounded-100 tablet:w-300px aboveGalaxyFold:w-250px w-200px"
+                        src="./IMG-0253.jpg"
+                        alt="me"
+                    />
                     <p className="text-xl font-semibold">Renata Klevickienė</p>
                 </div>
             </div>

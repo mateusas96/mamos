@@ -1,8 +1,14 @@
 export default function FithSection() {
     const contacts = [
         { id: 'phone', name: 'Tel. nr.: ', attr: 'tel:', value: '+37066408314' },
-        { id: 'email', name: 'El. paštas: ', attr: 'mailto:', value: 'pokytis2@gmail.com' },
-        { id: 'origin', name: 'Vilnius, Lietuva', attr: '' },
+        { id: 'email', name: 'El. paštas: ', attr: 'mailto:', value: 'r.klevickiene@gmail.com' },
+        {
+            id: 'origin',
+            name: 'Adresas: ',
+            attr: 'https://www.google.com/maps?q=',
+            value: 'Mindaugo g. 21, Vilnius',
+            target: '_blank',
+        },
     ];
 
     return (
@@ -18,7 +24,11 @@ export default function FithSection() {
                                     <div key={contact.id}>
                                         {contact.name}
                                         {contact.attr && (
-                                            <a className="underline text-sky-900" href={contact.attr + contact.value}>
+                                            <a
+                                                className="underline text-sky-900"
+                                                href={contact.attr + contact.value}
+                                                target={contact.target ? contact.target : ''}
+                                            >
                                                 {contact.value}
                                             </a>
                                         )}

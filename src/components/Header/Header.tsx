@@ -55,10 +55,10 @@ export default function Header() {
         <header className="text-center sticky top-0 laptop:p-10 p-6 z-20 bg-accent-1 shadow-2xl" id="primary-nav">
             <div className="absolute bg-accent-1 top-0 right-0 bottom-0 left-0 z-10 d-block" />
             <div className="z-20">
-                {showDesktopMenu && <div className="z-20 relative block text-3xl">Studija „Pokytis“</div>}
+                {showDesktopMenu && <div className="z-20 relative block text-3xl">Geštalto terapija</div>}
                 {!showDesktopMenu && (
                     <div className="z-20 relative laptop:hidden flex justify-between">
-                        <div className="text-lg">Studija „Pokytis“</div>
+                        <div className="text-lg">Geštalto terapija</div>
                         <button onClick={() => setShowMenu((oldVal) => !oldVal)}>
                             <img src={showMenu ? './close.png' : './menu.png'} alt="menu" />
                         </button>
@@ -82,7 +82,7 @@ export default function Header() {
                         </ul>
                     )}
                     {showMenu && (
-                        <ul className="flex laptop:hidden bg-accent-1 w-full text-right flex-col gap-6 py-10 pr-6 text-lg">
+                        <ul className="flex laptop:hidden bg-accent-1 w-full text-right flex-col gap-6 py-10 pr-6 text-lg shadow-2xl">
                             {navItems.map((item) => (
                                 <li key={item.id}>
                                     <a href={`#${item.id}`} onClick={() => setShowMenu((oldVal) => !oldVal)}>

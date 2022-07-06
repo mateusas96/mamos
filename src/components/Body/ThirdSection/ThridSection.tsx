@@ -13,7 +13,7 @@ export default function ThirdSection() {
         '- kamuoja liūdesys, nerimas, baimės, nepasitenkinimas,',
         '- patyrėte netektį,',
         '- jaučiate fizinius negalavimus, tačiau nėra nustatytos tam jokios priežastys,',
-        '- arba kai tiesiog darosi per sunku su situacijomis gyvenime tvarkytis patiems.',
+        '- arba kai tiesiog darosi per sunku su situacijomis gyvenime tvarkytis vienam/vienai.',
     ];
 
     return (
