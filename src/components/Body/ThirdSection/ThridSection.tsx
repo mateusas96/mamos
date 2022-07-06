@@ -28,7 +28,9 @@ export default function ThirdSection() {
                             kaip turite gyventi, bet padėsiu suprasti vidines sunkumų priežastis ir išsiaiškinti kas
                             trukdo daryti tai, ką norite, padėsiu patiems rasti atsakymus ir priimti sprendimus.
                         </p>
-                        <p className="pt-4">Individuali terapija lietuvių ir rusų kalbomis gyvai ar internetu.</p>
+                        <p className="pt-4">
+                            Individuali terapija lietuvių ir rusų kalbomis gyvai (Vilniuje) ar internetu.
+                        </p>
                         <p className="pt-4 font-semibold">Kreipkitės, jei:</p>
                         <div className="pt-2">
                             <ul className="pl-4">

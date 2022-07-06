@@ -98,7 +98,7 @@ export default function FourthSection() {
             <div className="laptop:w-1224px w-full flex tablet:flex-row flex-col">
                 {/* left-side */}
                 <div className="tablet:w-1/2 w-full flex justify-center">
-                    <div className="laptop:py-4 py-2 tablet:w-3/4 w-11/12">
+                    <div className="py-4 tablet:w-3/4 w-11/12">
                         <div className="laptop:text-2xl text-lg font-semibold text-center">SUSISIEKITE</div>
                         <div className="pb-1 justify-center flex">
                             <form ref={form} className="flex flex-col">

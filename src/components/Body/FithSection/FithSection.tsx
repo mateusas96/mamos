@@ -26,7 +26,7 @@ export default function FithSection() {
                                 ))}
                             </div>
                         </div>
-                        <p className="pt-4">Individualios konsultacijos gyvai ar internetu</p>
+                        <p className="pt-4">Individualios konsultacijos gyvai (Vilniuje) ar internetu</p>
                     </div>
                 </div>
             </div>
