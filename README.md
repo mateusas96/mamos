@@ -4,6 +4,7 @@
 
 -   Created using React typescript
 -   For now website is only in Lithuanian language
+-   Hosted using GH Pages
 
 ## For those who want to visit
 
