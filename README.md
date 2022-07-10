@@ -2,7 +2,7 @@
 
 ## Quick info
 
--   Created using React typescript
+-   Created using React typescript and Tailwind
 -   For now website is only in Lithuanian language
 -   Hosted using GH Pages
 
