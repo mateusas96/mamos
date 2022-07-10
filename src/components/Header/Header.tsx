@@ -82,7 +82,7 @@ export default function Header() {
                         </ul>
                     )}
                     {showMenu && (
-                        <ul className="flex laptop:hidden bg-accent-1 w-full text-right flex-col gap-6 py-10 pr-6 text-lg shadow-2xl">
+                        <ul className="flex laptop:hidden bg-accent-1 w-full text-right flex-col gap-6 py-5 pr-6 mt-23px text-lg shadow-bottom-2xl">
                             {navItems.map((item) => (
                                 <li key={item.id}>
                                     <a href={`#${item.id}`} onClick={() => setShowMenu((oldVal) => !oldVal)}>

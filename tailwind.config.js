@@ -23,6 +23,12 @@ module.exports = {
             borderRadius: {
                 100: '100%',
             },
+            boxShadow: {
+                'bottom-2xl': '0 25px 50px -25px rgb(0 0 0 / 0.25);',
+            },
+            margin: {
+                '23px': '23px',
+            },
         },
     },
     plugins: [],
