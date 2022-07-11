@@ -1,10 +1,17 @@
 export default function FithSection() {
     const contacts = [
-        { id: 'phone', name: 'Tel. nr.: ', attr: 'tel:', value: '+37066408314' },
-        { id: 'email', name: 'El. paštas: ', attr: 'mailto:', value: 'r.klevickiene@gmail.com' },
+        { id: 'phone', icon: './phone-call.png', attr: 'tel:', value: '+37066408314' },
+        {
+            id: 'fb',
+            icon: './facebook.png',
+            attr: 'https://www.facebook.com/people/Ge%C5%A1talto-psichoterapija-Renata-Klevickiene/100082690724226/',
+            value: '',
+            name: 'Geštalto terapija',
+            target: '_blank',
+        },
         {
             id: 'origin',
-            name: 'Adresas: ',
+            icon: './address.png',
             attr: 'https://www.google.com/maps?q=',
             value: 'Mindaugo g. 21, Vilnius',
             target: '_blank',
@@ -21,15 +28,15 @@ export default function FithSection() {
                         <div className="laptop:w-full pt-4 text-center">
                             <div className="flex flex-col tablet:flex-row justify-center tablet:gap-16 gap-1">
                                 {contacts.map((contact) => (
-                                    <div key={contact.id}>
-                                        {contact.name}
+                                    <div className="flex items-center justify-center" key={contact.id}>
+                                        <img src={contact.icon} alt={contact.id} />
                                         {contact.attr && (
                                             <a
-                                                className="underline text-sky-900"
+                                                className="underline text-sky-900 ml-3"
                                                 href={contact.attr + contact.value}
                                                 target={contact.target ? contact.target : ''}
                                             >
-                                                {contact.value}
+                                                {contact.value ? contact.value : contact.name}
                                             </a>
                                         )}
                                     </div>

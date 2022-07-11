@@ -26,8 +26,8 @@ export default function SecondSection() {
                     </div>
                     <div className="pt-4">
                         <h1 className="laptop:text-3xl text-xl">STUDIJOS</h1>
-                        <div className="text-xl pt-4">
-                            <ul>
+                        <div className="text-xl pt-2">
+                            <ul className="list-disc ml-6">
                                 {studies.map((study, idx) => (
                                     <li key={idx}>{study}</li>
                                 ))}

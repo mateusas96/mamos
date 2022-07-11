@@ -13,7 +13,7 @@ export default function ThirdSection() {
         '- kamuoja liūdesys, nerimas, baimės, nepasitenkinimas,',
         '- patyrėte netektį,',
         '- jaučiate fizinius negalavimus, tačiau nėra nustatytos tam jokios priežastys,',
-        '- arba kai tiesiog darosi per sunku su situacijomis gyvenime tvarkytis vienam/vienai.',
+        '- arba kai tiesiog darosi per sunku su situacijomis gyvenime tvarkytis vienam.',
     ];
 
     return (
@@ -29,7 +29,7 @@ export default function ThirdSection() {
                             trukdo daryti tai, ką norite, padėsiu patiems rasti atsakymus ir priimti sprendimus.
                         </p>
                         <p className="pt-4">
-                            Individuali terapija lietuvių ir rusų kalbomis gyvai (Vilniuje) ar internetu.
+                            Individuali terapija lietuvių ir rusų kalbomis gyvai (Vilniuje) arba internetu.
                         </p>
                         <p className="pt-4 font-semibold">Kreipkitės, jei:</p>
                         <div className="pt-2">
