@@ -29,7 +29,9 @@ export default function SecondSection() {
                         <div className="text-xl pt-2">
                             <ul className="list-disc ml-6">
                                 {studies.map((study, idx) => (
-                                    <li key={idx}>{study}</li>
+                                    <li key={idx}>
+                                        {study} {idx === 0 && <small className="text-xs">(šiuo metu)</small>}
+                                    </li>
                                 ))}
                             </ul>
                         </div>

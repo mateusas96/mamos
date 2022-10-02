@@ -68,14 +68,7 @@ export default function Header() {
                     {showDesktopMenu && (
                         <ul className="hidden laptop:flex justify-center gap-6 pt-4 text-xl">
                             {navItems.map((item) => (
-                                <li
-                                    key={item.id}
-                                    className={`${
-                                        item.id === 'pagrindinis'
-                                            ? `${item.id} underline`
-                                            : `${item.id} hover:underline`
-                                    }`}
-                                >
+                                <li key={item.id} className={`${item.id} hover:underline`}>
                                     <a href={`#${item.id}`}>{item.name}</a>
                                 </li>
                             ))}
