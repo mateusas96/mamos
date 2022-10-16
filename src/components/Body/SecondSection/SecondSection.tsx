@@ -3,7 +3,7 @@ export default function SecondSection() {
         'Klaipėdos universitetas - psichologija',
         'Vilniaus Geštalto institutas - geštalto psichoterapija',
         'Vilniaus Geštalto institutas - grupinė psichoterapija',
-        'VPU - dalyko pedagogika',
+        'VPU - chemija',
     ];
 
     return (
