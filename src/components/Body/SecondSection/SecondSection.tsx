@@ -1,9 +1,10 @@
 export default function SecondSection() {
     const studies = [
-        'Klaipėdos universitetas - psichologija',
-        'Vilniaus Geštalto institutas - geštalto psichoterapija',
-        'Vilniaus Geštalto institutas - grupinė psichoterapija',
-        'VPU - chemija',
+        { title: 'EMDR Europe - EMDR (Akių judesių nujautrinimo ir perdirbimo terapija, 1 lygis)', subtitle: '' },
+        { title: 'Klaipėdos universitetas - psichologija', subtitle: '(dabar)' },
+        { title: 'Vilniaus Geštalto institutas - geštalto psichoterapija', subtitle: '' },
+        { title: 'Vilniaus Geštalto institutas - grupinė psichoterapija', subtitle: '' },
+        { title: 'VPU - chemija', subtitle: '' },
     ];
 
     return (
@@ -30,7 +31,7 @@ export default function SecondSection() {
                             <ul className="list-disc ml-6">
                                 {studies.map((study, idx) => (
                                     <li key={idx}>
-                                        {study} {idx === 0 && <small className="text-xs">(šiuo metu)</small>}
+                                        {study.title} <small className="text-xs">{study.subtitle}</small>
                                     </li>
                                 ))}
                             </ul>
