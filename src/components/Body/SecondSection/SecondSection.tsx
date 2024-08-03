@@ -1,7 +1,8 @@
 export default function SecondSection() {
     const studies = [
         { title: 'EMDR Europe - EMDR (Akių judesių nujautrinimo ir perdirbimo terapija, 1 lygis)', subtitle: '' },
-        { title: 'Klaipėdos universitetas - psichologija', subtitle: '(dabar)' },
+        { title: 'Vilniaus universitetas - psichologija', subtitle: '' },
+        { title: 'Klaipėdos universitetas - psichologija', subtitle: '' },
         { title: 'Vilniaus Geštalto institutas - geštalto psichoterapija', subtitle: '' },
         { title: 'Vilniaus Geštalto institutas - grupinė psichoterapija', subtitle: '' },
         { title: 'VPU - chemija', subtitle: '' },

@@ -13,7 +13,7 @@ export default function FithSection() {
             id: 'origin',
             icon: './address.png',
             attr: 'https://www.google.com/maps?q=',
-            value: 'Mindaugo g. 21, Vilnius',
+            value: 'Vilniaus centre',
             target: '_blank',
         },
     ];

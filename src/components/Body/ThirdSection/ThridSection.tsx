@@ -10,10 +10,10 @@ export default function ThirdSection() {
         '- atsidūrėte krizinėje situacijoje,',
         '- santykiai tapo sudėtingi, įtempti,',
         '- nepasitikite savimi,',
-        '- kamuoja liūdesys, nerimas, baimės, nepasitenkinimas,',
+        '- kamuoja liūdesys, nerimas, baimės, nepasitenkinimas, pyktis,',
         '- patyrėte netektį,',
         '- jaučiate fizinius negalavimus, tačiau nėra nustatytos tam jokios priežastys,',
-        '- arba kai tiesiog darosi per sunku su situacijomis gyvenime tvarkytis vienam.',
+        '- tiesiog darosi per sunku su situacijomis gyvenime tvarkytis vienam.',
     ];
 
     return (
