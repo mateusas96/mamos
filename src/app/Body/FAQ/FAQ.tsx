@@ -9,7 +9,7 @@ export default function FAQ() {
 
     return (
         <section className="w-full flex justify-center py-8 px-4" id="FAQ">
-            <div className="laptop:w-1/2 w-full flex flex-col justify-center">
+            <div className="laptop:max-w-[800px] w-full flex flex-col justify-center">
                 <div className="laptop:text-2xl text-lg font-semibold text-center py-4">DUK</div>
                 <div className="flex flex-col gap-2">
                     {faqItems.map((item, index) => (
