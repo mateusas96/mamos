@@ -12,7 +12,7 @@ module.exports = {
         extend: {
             colors: {
                 'accent-1': '#fff5f5',
-                'white-transparent': '#ffffffcf',
+                'white-transparent': '#ffffffe0',
             },
             width: {
                 '1224px': '1224px',

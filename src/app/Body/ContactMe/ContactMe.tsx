@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import { useCallback, useRef, useState } from 'react';
 import env from '../../../env.json';
 
-export default function FourthSection() {
+export default function ContactMe() {
     const initialFieldsValues: { [key: string]: string } = {
         from_name: '',
         reply_to: '',
@@ -20,7 +20,7 @@ export default function FourthSection() {
         showCheckMark: false,
     });
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
-    const form = useRef() as any;
+    const form = useRef<HTMLFormElement | null>(null);
 
     const btnDisabled =
         apiInteraction.apiCallInProgress ||
@@ -63,15 +63,21 @@ export default function FourthSection() {
     );
 
     const sendEmail = async (e: any) => {
+        e.preventDefault();
+
+        const formElement = form.current;
+        if (!formElement) {
+            return;
+        }
+
         setApiInteraction((oldVal) => ({
             ...oldVal,
             apiCallInProgress: true,
             showSpinner: true,
         }));
-        e.preventDefault();
 
         try {
-            const resp = await emailjs.sendForm(env.serviceID, env.templateID, form.current, env.publicKey);
+            const resp = await emailjs.sendForm(env.serviceID, env.templateID, formElement, env.publicKey);
             const { status } = resp;
             if (status === 200) {
                 setApiInteraction((oldVal) => ({

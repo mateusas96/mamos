@@ -5,51 +5,54 @@ export default function Header() {
         { id: 'pagrindinis', name: 'Pagrindinis' },
         { id: 'apieMane', name: 'Apie mane' },
         { id: 'paslaugos', name: 'Paslaugos' },
+        { id: 'FAQ', name: 'DUK' },
         { id: 'susisiekite', name: 'Susisiekite' },
     ];
     const [showMenu, setShowMenu] = useState(false);
     const [showDesktopMenu, setShowDesktopMenu] = useState(true);
+    const [activeSection, setActiveSection] = useState('pagrindinis');
+    const navSectionIds = navItems.map((item) => item.id);
 
     useEffect(() => {
-        ['load', 'resize'].forEach(function (type) {
-            window.addEventListener(type, () => {
-                const laptopBreakPoint = 992;
-                if (laptopBreakPoint > window.innerWidth) setShowDesktopMenu(false);
-                else setShowDesktopMenu(true);
-            });
-        });
+        const onResize = () => {
+            const laptopBreakPoint = 992;
+            setShowDesktopMenu(window.innerWidth >= laptopBreakPoint);
 
-        window.dispatchEvent(new Event('load'));
+            const navItem = document.querySelector('#primary-nav');
+            if (navItem !== null) {
+                const navHeight = navItem.scrollHeight;
+                document.documentElement.style.setProperty('--scroll-padding', `${navHeight - 1}px`);
+            }
+        };
 
-        const navItem = document.querySelector('#primary-nav');
+        const onScroll = () => {
+            const sections = navSectionIds
+                .map((id) => document.getElementById(id))
+                .filter((section): section is HTMLElement => section !== null);
+            const navItem = document.querySelector<HTMLElement>('#primary-nav');
+            const navHeight = navItem?.offsetHeight ?? 0;
+            const scrollPosition = window.scrollY + navHeight + 8;
 
-        if (navItem !== null) {
-            const navHeight = navItem.scrollHeight;
-            document.documentElement.style.setProperty('--scroll-padding', `${navHeight - 1}px`);
-        }
-
-        const sections = document.querySelectorAll('section');
-        const navLi = document.querySelectorAll('nav ul li');
-        window.addEventListener('scroll', () => {
-            let current: string = '';
+            let current = 'pagrindinis';
             sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - sectionHeight) {
-                    if (section.getAttribute('id') !== null) {
-                        current = String(section.getAttribute('id'));
-                    }
+                if (scrollPosition >= section.offsetTop) {
+                    current = section.id;
                 }
             });
 
-            navLi.forEach((li) => {
-                li.classList.remove('underline');
-                if (li.classList.contains(current)) {
-                    li.classList.add('underline');
-                }
-            });
-        });
-    }, [showDesktopMenu, showMenu]);
+            setActiveSection(current);
+        };
+
+        onResize();
+        onScroll();
+        window.addEventListener('resize', onResize);
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('resize', onResize);
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
 
     return (
         <header className="text-center sticky top-0 laptop:p-10 p-6 z-20 bg-accent-1 shadow-2xl" id="primary-nav">
@@ -70,13 +73,11 @@ export default function Header() {
                             {navItems.map((item) => (
                                 <li
                                     key={item.id}
-                                    className={`${
-                                        item.id === 'pagrindinis'
-                                            ? `${item.id} underline hover:underline`
-                                            : `${item.id} hover:underline`
-                                    }`}
+                                    className={item.id === activeSection ? 'underline' : 'hover:underline'}
                                 >
-                                    <a href={`#${item.id}`}>{item.name}</a>
+                                    <a href={`#${item.id}`} onClick={() => setActiveSection(item.id)}>
+                                        {item.name}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -84,8 +85,14 @@ export default function Header() {
                     {showMenu && (
                         <ul className="flex laptop:hidden bg-accent-1 w-full text-right flex-col gap-6 py-5 pr-6 mt-23px text-lg shadow-bottom-2xl">
                             {navItems.map((item) => (
-                                <li key={item.id}>
-                                    <a href={`#${item.id}`} onClick={() => setShowMenu((oldVal) => !oldVal)}>
+                                <li key={item.id} className={item.id === activeSection ? 'underline' : ''}>
+                                    <a
+                                        href={`#${item.id}`}
+                                        onClick={() => {
+                                            setActiveSection(item.id);
+                                            setShowMenu((oldVal) => !oldVal);
+                                        }}
+                                    >
                                         {item.name}
                                     </a>
                                 </li>

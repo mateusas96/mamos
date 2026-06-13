@@ -1,4 +1,4 @@
-export default function FithSection() {
+export default function Contacts() {
     const contacts = [
         { id: 'phone', icon: './phone-call.png', attr: 'tel:', value: '+37066408314' },
         {
@@ -43,7 +43,7 @@ export default function FithSection() {
                                 ))}
                             </div>
                         </div>
-                        <p className="pt-4">Individualios konsultacijos gyvai (Vilniuje) ar internetu</p>
+                        <p className="pt-4">Individualios konsultacijos gyvai (Vilniuje) ar nuotoliu</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Body from './components/Body';
-import Header from './components/Header';
+import Body from './app/Body';
+import Header from './app/Header';
 
 function App() {
     return (
