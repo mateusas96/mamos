@@ -10,10 +10,10 @@ export default function Accordion({ title, content }: AccordionProps) {
     const contentId = useId();
 
     return (
-        <div className="w-full border rounded border-black/20">
+        <div className="w-full border rounded-xl border-black/20">
             <button
                 type="button"
-                className="flex w-full items-center cursor-pointer justify-between gap-4 text-left hover:bg-black/10 p-4 rounded transition-colors duration-300"
+                className="flex w-full items-center cursor-pointer justify-between gap-4 text-left hover:bg-black/10 p-4 rounded-xl transition-colors duration-300"
                 onClick={() => setIsOpen((prev) => !prev)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}

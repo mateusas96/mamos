@@ -49,7 +49,7 @@ export default function Services() {
                 {/* left-side */}
                 <div className=" laptop:px-8 px-4 laptop:py-12 py-6 bg-white-transparent">
                     <div className="laptop:text-5xl text-3xl">PASLAUGOS</div>
-                    <div className="order-1 grid laptop:grid-cols-2 laptop:gap-8">
+                    <div className="grid laptop:grid-cols-2 laptop:gap-8">
                         <div className="text-xl pt-4 laptop:col-span-2">
                             <p className="pt-4 font-semibold">Kviečiu susitikimui, jei:</p>
                             <div className="pt-2">
@@ -60,7 +60,7 @@ export default function Services() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="laptop:order-2 order-3 text-xl">
+                        <div className="text-xl">
                             <p className="pt-4 font-semibold">Taikomi metodai</p>
                             <div className="pt-2">
                                 <ul className="pl-4 flex flex-col gap-4">
@@ -73,20 +73,18 @@ export default function Services() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="laptop:order-3 order-2 text-xl">
+                        <div>
                             <p className="pt-4 font-semibold">Psichoterapija padeda:</p>
-                            <div className="pt-2">
-                                <ul className="pl-4 list-disc list-inside">
-                                    {helps.map((help, idx) => (
-                                        <li key={idx}>{help}</li>
-                                    ))}
-                                </ul>
+                            <ul className="pl-4 list-disc list-inside">
+                                {helps.map((help, idx) => (
+                                    <li key={idx}>{help}</li>
+                                ))}
+                            </ul>
+                            <div>
+                                <p className="pt-4 font-semibold">Pirmoji konsultacija</p>
+                                <p className="pl-4">Pirmojo susitikimo metu aptariama Jūsų situacija, poreikiai ir terapijos tikslai. Kartu įvertiname, kokia pagalba šiuo metu būtų tinkamiausia.</p>
+                                <b className="pl-4">Sesijos trukmė - 50 min.</b>
                             </div>
-                        </div>
-                        <div className="laptop:order-4 order-last text-xl">
-                            <p className="pt-4 font-semibold">Pirmoji konsultacija</p>
-                            <p className="pt-2 pl-4">Pirmojo susitikimo metu aptariama Jūsų situacija, poreikiai ir terapijos tikslai. Kartu įvertiname, kokia pagalba šiuo metu būtų tinkamiausia.</p>
-                            <b className="pl-4">Sesijos trukmė - 50 min.</b>
                         </div>
                     </div>
                 </div>

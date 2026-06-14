@@ -127,7 +127,7 @@ export default function ContactMe() {
                                                         text-gray-700
                                                         border
                                                         border-gray-400
-                                                        rounded
+                                                        rounded-xl
                                                         py-3
                                                         px-4
                                                         leading-tight
@@ -162,7 +162,7 @@ export default function ContactMe() {
                                                         text-gray-700
                                                         border
                                                         border-gray-400
-                                                        rounded
+                                                        rounded-xl
                                                         py-3
                                                         px-4
                                                         leading-tight
@@ -198,7 +198,7 @@ export default function ContactMe() {
                                     <div className="w-full">
                                         <button
                                             disabled={btnDisabled}
-                                            className={`w-full text-white py-3 text-xl ${
+                                            className={`w-full justify-center group inline-flex items-center gap-2 rounded-xl px-10 py-2 font-medium shadow-sm transition-all duration-200 text-white hover:shadow text-xl ${
                                                 !btnDisabled
                                                     ? 'laptop:hover:bg-zinc-900 bg-zinc-800'
                                                     : 'laptop:cursor-not-allowed bg-zinc-400'

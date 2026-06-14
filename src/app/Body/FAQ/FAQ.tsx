@@ -4,7 +4,7 @@ export default function FAQ() {
     const faqItems = [
         { question: "Ar man tikrai reikia kreiptis į psichologą?", answer: "Nebūtina laukti krizės ar labai sunkių išgyvenimų. Kreiptis verta tuomet, kai emociniai, santykių ar gyvenimo sunkumai ima trukdyti kasdienei savijautai, darbui ar bendravimui." },
         { question: "Kiek laiko trunka psichologinė pagalba?", answer: "Pagalbos trukmė priklauso nuo individualios situacijos, sunkumų pobūdžio ir Jūsų tikslų. Vieniems pakanka kelių konsultacijų, kitiems naudingas ilgesnis terapinis procesas." },
-        { question: "Ar konsultacijos yra konfidencialios?", answer: "Taip. Visa konsultacijų metu pateikta informacija yra konfidenciali ir saugoma laikantis profesinės etikos bei teisės aktų reikalavimų." },
+        { question: "Ar konsultacijos yra konfidencialios?", answer: "Taip. Visa konsultacijų metu pateikta informacija yra konfidenciali ir saugoma laikantis profesinės etikos reikalavimų." },
     ];
 
     return (
