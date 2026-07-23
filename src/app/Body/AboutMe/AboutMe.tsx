@@ -3,7 +3,7 @@ import SeeMore from '../../../components/SeeMore';
 
 export default function AboutMe() {
     const studies = [
-        { title: 'Geštalto psichoterapija, grupinė psichoterapija - Rygos geštalto institutas', subtitle: '' },
+        { title: 'Geštalto psichoterapija, grupinė psichoterapija - Vilniaus geštalto institutas', subtitle: '' },
         { title: 'Edukacinė ir vaiko psichologija, magistro studijos - Vilniaus universitetas', subtitle: '' },
         { title: 'Psichologija - Klaipėdos universitetas', subtitle: '' },
         {
@@ -50,14 +50,11 @@ export default function AboutMe() {
                 </div>
                 {/* right-side */}
                 <div className="tablet:w-1/2 py-8 w-full inline-flex flex-col justify-center items-center">
-                    <img
-                        className="rounded-100 tablet:w-300px tablet:h-[300px] aboveGalaxyFold:w-250px aboveGalaxyFold:h-[250px] w-200px h-[200px] object-cover"
-                        // src="./photo-black.webp"
-                        // src="./photo-light-grey.webp"
-                        // src="./photo-white.webp"
-                        src="./photo.webp"
-                        alt="me"
-                    />
+                    <picture>
+                        <source srcSet="./profile.webp" type="image/webp" />
+                        <source srcSet="./profile.jpg" type="image/jpeg" />
+                        <img src="./profile.jpg" alt="me" className="rounded-100 tablet:w-300px tablet:h-[300px] aboveGalaxyFold:w-250px aboveGalaxyFold:h-[250px] w-200px h-[200px] object-cover" />
+                    </picture>
                     <p className="text-xl font-semibold">Renata Klevickienė</p>
                 </div>
             </div>
